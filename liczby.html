@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+	<meta charset="UTF-8">
+	<title>Ciągi liczbowe</title>
+	<link rel="stylesheet" href="styl2.css">
+
+</head>
+
+<body>
+
+	<section class="b1">
+	
+		<h2>Poznaj Ciągi Liczbowe</h2>
+	
+	</section>
+	
+	<section class="b2">
+	
+		<a href="liczby.html"><h5>Ciągi arytmetyczne</h5></a>
+		
+	</section>
+	
+	<section class="b3">
+	
+		<a href="fib.html"><h5>Ciąg Fibonacciego</h5></a>
+	
+	</section>
+	
+	<section class="b4">
+	
+		<img src="obraz1.png" alt="Fibonacci">
+	
+	</section>
+	
+	<section class="lewy">
+	
+		<ol>
+			<li>ciągi arytmetyczne</li>
+			<li>ciągi geometryczne</li>
+			<li>ciąg Fibonacciego</li>
+		</ol>
+	
+	</section>
+	
+	<section class="prawy">
+	
+		<h2>Generowanie ciągu arytmetycznego</h2> <br>
+		Pierwszy wyraz A1: <input type="number" id="a"> <br>
+		Różnica ciągu R: <input type="number" id="r"> <br>
+		Liczba wyrazów w ciągu N: <input type="number" id="n"> <br>
+		<button onClick="obliczenia()">Generuj ciąg</button> <br>
+		<p id="wynik"></p>
+		
+		<script>
+		
+			function obliczenia() {
+				let a = parseInt(document.getElementById("a").value);
+				let r = parseInt(document.getElementById("r").value);
+				let n = parseInt(document.getElementById("n").value);
+				let wynik = document.getElementById("wynik");
+				res = "Ciąg geometryczny zawiera wyrazy: ";
+				
+				while(n){
+				res += a + ', ';
+				a = a+r;
+				n--;
+				}
+				
+				wynik.innerHTML = res;
+				
+				}
+			
+		
+		</script>
+	
+	</section>
+	
+	<footer>
+	
+		<p>Autor: LK-Bartosh</p>
+	
+	</footer>
+
+</body>
+
+</html>
